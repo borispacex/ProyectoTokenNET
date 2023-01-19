@@ -22,5 +22,6 @@ CREATE TABLE HistorialRefreshToken(
 	FechaCreacion datetime,
 	FechaExpiracion datetime,
 	EsActivo AS ( iif(FechaExpiracion < getdate(), convert(bit,0), convert(bit,1)) ) --columna calculada
-
 );
+
+SELECT * FROM HistorialRefreshToken;

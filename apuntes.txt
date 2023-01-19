@@ -1,2 +1,4 @@
 MODELOS
 - Scaffold-DbContext "Server=DESKTOP-V3E5ICQ\MSSQLSERVERDEV; DataBase=dbprueba; Trusted_Connection=True; TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -OutPutDir Models
+PARA ACTUALIZAR MODELOS
+ - Scaffold-DbContext "Server=DESKTOP-V3E5ICQ\MSSQLSERVERDEV; DataBase=dbprueba; Trusted_Connection=True; TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -OutPutDir Models -force

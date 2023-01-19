@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "6f897918-f2a3-4289-83be-063a93ddf03d",
+		"name": "ProyectoToken .NET",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5726533"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombreUsuario\": \"admin\",\r\n  \"clave\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:59160/api/Usuario/Autenticar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "59160",
+					"path": [
+						"api",
+						"Usuario",
+						"Autenticar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPaises",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIxIiwibmJmIjoxNjc0MTQ5ODEzLCJleHAiOjE2NzQxNDk4NzMsImlhdCI6MTY3NDE0OTgxM30.RLn8EJhtaaVixjTH7-aPIihf6N1BHSXBmr4J--pBP80",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:59160/api/Paises/Lista",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "59160",
+					"path": [
+						"api",
+						"Paises",
+						"Lista"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPronosticoTiempo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:59160/WeatherForecast/PronosticoTiempo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "59160",
+					"path": [
+						"WeatherForecast",
+						"PronosticoTiempo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetRefreshToken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"tokenExpirado\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIxIiwibmJmIjoxNjc0MTQ5NjYwLCJleHAiOjE2NzQxNDk3MjAsImlhdCI6MTY3NDE0OTY2MH0.R1JAk9hr4eGWG0oHmk-nTr1pkxf3PU58XjRNn_qYnMg\",\r\n  \"refreshToken\": \"56zc4E/lbYJnIzWZaBmErdeXwvSFhL+LK/Oy/Ryuj8ZaEQNF1Kfr1eB2GV1ITaUi4hDlAQUDAdp9XzNmPhcNTg==\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:59160/api/Usuario/ObtenerRefreshToken",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "59160",
+					"path": [
+						"api",
+						"Usuario",
+						"ObtenerRefreshToken"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
